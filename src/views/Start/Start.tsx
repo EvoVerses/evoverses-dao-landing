@@ -17,6 +17,7 @@ import StartPage from "components/StartPage";
 import StartPageHeader from "components/StartPageHeader";
 import StartSplit from "components/StartSplit";
 import ReactTooltip from "react-tooltip";
+import ReactGA from "react-ga4";
 import "./style.css";
 
 const ASTRONAUTS = ["🕛", "🏛️", "⏳", "🌀", "👾"];
@@ -47,6 +48,11 @@ const Start: React.FC = () => {
         <Container size="lg">
           <Box row justifyContent="center">
             <Button text="Open App" onClick={()=> {
+              ReactGA.event({
+                category: "conversion",
+                action: "not_yet_app",
+                label: "hero"
+              });
               ReactTooltip.show(btnAppToolTipPRef.current);
             }} />
             <p ref={btnAppToolTipPRef} data-effect="float" data-offset="{'left':60, 'bottom':20}" data-place="bottom" data-tip='We are working on it, check our Discord for news!'></p>
@@ -55,6 +61,13 @@ const Start: React.FC = () => {
               text="Join 🌀 Discord"
               href="https://discord.gg/jEg5phcWmw"
               variant="secondary"
+              onClick={()=>{
+                ReactGA.event({
+                  category: "conversion",
+                  action: "open_discord",
+                  label: "hero"
+                });
+              }}
             />
           </Box>
         </Container>

@@ -10,6 +10,7 @@ import MenuIcon from "components/icons/Menu";
 import DarkModeSwitch from "../DarkModeSwitch";
 import Nav from "./components/Nav";
 import WalletButton from "../WallletButton";
+import ReactGA from "react-ga4";
 
 interface TopBarProps { }
 
@@ -64,9 +65,18 @@ const TopBar: React.FC<TopBarProps> = () => {
               <Spacer />
               {/* {location.pathname !== "/" ? (
                 <WalletButton />
-              ) : (
-                <Button size="sm" text="Open App" to="/" />
-              )} */}
+              ) : (*/}
+                <Button size="sm" text="Join 🌀 Discord"
+              href="https://discord.gg/jEg5phcWmw"
+              onClick={()=>{
+                ReactGA.event({
+                  category: "conversion",
+                  action: "open_discord",
+                  label: "top_bar"
+                });
+              }}
+              variant="secondary" />
+              {/* })} */}
             </StyledAccountButtonWrapper>
             {location.pathname !== "/" && (
               <>

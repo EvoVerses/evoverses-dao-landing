@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { contributors } from "utils/misc";
 
 import footers from 'constants/Footers.json';
+import ReactGA from "react-ga4";
 
 const Nav: React.FC = () => {
 
@@ -17,7 +18,13 @@ const Nav: React.FC = () => {
           <div key={index}>
           {
             footer.router ? <StyledRouterLink exact to={footer.url}>{footer.name}</StyledRouterLink>
-                          : <StyledLink href={footer.url} target="_blank">{footer.name}</StyledLink>
+                          : <StyledLink onClick={()=>{
+                            ReactGA.event({
+                              category: "conversion",
+                              action: `open_${footer.name}`,
+                              label: "footer_bar"
+                            });
+                          }} href={footer.url} target="_blank">{footer.name}</StyledLink>
           }
           </div>
         ))}
