@@ -84,7 +84,7 @@ const Start: React.FC = () => {
           EvoVerses DAO is owned and controlled by our community of 🌀 token holders.<br/> Yes, we are a DAO with community votes and <b>multisig wallet</b>, as every project should be!
         </StyledSectionDescription>
         <Spacer size="lg" />
-        <StyledSectionH2>Which DeFi and Game are we developing?</StyledSectionH2>
+        <StyledSectionH2>Which DeFi and Game projects are we developing?</StyledSectionH2>
         <Spacer size="md" />
         <Spacer size="md" />
         <Spacer size="md" />
