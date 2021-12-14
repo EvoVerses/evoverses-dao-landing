@@ -20,7 +20,7 @@ import ReactTooltip from "react-tooltip";
 import ReactGA from "react-ga4";
 import "./style.css";
 
-const ASTRONAUTS = ["🕛", "🏛️", "⏳", "🌀", "👾"];
+const ASTRONAUTS = ["🕛", "🏛️", "⏳", "🌀", "👾", "🧬"];
 
 const Start: React.FC = () => {
   const [astronaut, setAstronaut] = useState("🌀");
