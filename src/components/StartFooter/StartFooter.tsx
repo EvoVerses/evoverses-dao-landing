@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom";
 
 import Split from "components/Split";
 import footers from "constants/Footers.json";
+import ReactGA from "react-ga4";
 import DarkModeSwitch from "../DarkModeSwitch";
 
 const StartFooter: React.FC = () => {
@@ -17,28 +18,34 @@ const StartFooter: React.FC = () => {
       <Container>
         <Split>
           {footerItems.map((footer: any, index: any) => (
-            <div key={index}>
+            <StyledDivContainer key={index}>
               {footer.router ? (
                 <StyledRouterLink exact to={footer.url}>
                   {footer.name}
                 </StyledRouterLink>
               ) : (
-                <StyledLink href={footer.url} target="_blank">
+                <StyledLink onClick={()=>{
+                  ReactGA.event({
+                    category: "conversion",
+                    action: `open_${footer.name}`,
+                    label: "footer_bar"
+                  });
+                }} href={footer.url} target="_blank">
                   {footer.name}
                 </StyledLink>
               )}
-            </div>
+            </StyledDivContainer>
           ))}
         </Split>
       </Container>
       <Spacer size="lg" />
-      {/* <StyledFooterText>
+      <StyledFooterText>
         <span style={{ opacity: 0.5 }}>Built with </span>
         <span role="img"> ❤️ </span>
-        <span style={{ opacity: 0.5 }}>by the *** community.</span>
+        <span style={{ opacity: 0.5 }}>by the EvoVerses community.</span>
         <br />
-        <span style={{ opacity: 0.5 }}>All rights reserved.</span>
-      </StyledFooterText> */}
+        <span style={{ opacity: 0.5 }}>All rights reserved. © {new Date().getFullYear()} EvoVerses</span>
+      </StyledFooterText>
       <Spacer />
       <StyledFooterDarkModeSwitch>
         <br />
@@ -53,6 +60,14 @@ const StartFooter: React.FC = () => {
 interface StyledFooterProps {
   darkMode?: boolean;
 }
+
+const StyledDivContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+`;
+
 const StyledFooter = styled.div<StyledFooterProps>`
   background-color: ${(props) =>
     props.darkMode
