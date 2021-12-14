@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "homepage": "./",
   "private": true,
+  "engines": {
+    "node": "14.18.2"
+  },
   "dependencies": {
     "@ethersproject/units": "^5.4.0",
     "@testing-library/jest-dom": "^5.11.4",
