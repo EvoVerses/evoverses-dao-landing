@@ -43,7 +43,7 @@ const Start: React.FC = () => {
         <StartPageHeader
           icon={`${astronaut}`}
           title="DeFi 2.0 tools to grow your crypto assets"
-          subtitle="Evoverses DAO is the Olympus fork on Harmony ONE. Evoverses DAO has an objetive: build an entire DeFi ecosystem and we are starting by building a community owned protocol for decentralized reserve currency."
+          subtitle="EvoVerses DAO is the OlympusDAO + Tomb.finance fork on Harmony ONE. EvoVerses DAO has an objetive: build an entire DeFi ecosystem and we are starting by building a community owned protocol for decentralized reserve currency."
         />
         <Container size="lg">
           <Box row justifyContent="center">
@@ -80,10 +80,33 @@ const Start: React.FC = () => {
         <Spacer size="lg" />
         <StyledSectionTitle>Fair finance for everyone.</StyledSectionTitle>
         <StyledSectionDescription>
-          Evoverses DAO is owned and controlled by our community of 🌀 token holders.
+          EvoVerses DAO is owned and controlled by our community of 🌀 token holders.<br/> Yes, we are a DAO with community votes and <b>multisig wallet</b>, as every project should be!
         </StyledSectionDescription>
         <Spacer size="lg" />
+        <StyledSectionH2>Which DeFi services do we currently have?</StyledSectionH2>
+        <Spacer size="md" />
+        <Spacer size="md" />
+        <Spacer size="md" />
+        <StyledSectionH3>Our OHM Fork: <span style={{color:"#DE961A"}}>🌀 Portal</span></StyledSectionH3>
+        <StyledSectionH4>A real DAO, with community governance and multisig wallet</StyledSectionH4>
+        <Spacer size="md" />
         <StartSplit>
+          <Card>
+            <Spacer size="md" />
+            <CardIcon>🏛️</CardIcon>
+            <CardContent>
+              <StyledCardName>Protocol Owned Liquidity</StyledCardName>
+              <Spacer size="sm" />
+              <StyledCardDescription>
+                No more predatory farmers. Lock-in liquidity also help regulate PTL supply.
+              </StyledCardDescription>
+            </CardContent>
+            {/* <CardActions>
+              <Box row justifyContent="center">
+                <Button text="Start farming" variant="secondary" to="/farm" />
+              </Box>
+            </CardActions> */}
+          </Card>
           <Card>
             <Spacer size="md" />
             <CardIcon>💸</CardIcon>
@@ -91,7 +114,7 @@ const Start: React.FC = () => {
               <StyledCardName>Growing Treasury</StyledCardName>
               <Spacer size="sm" />
               <StyledCardDescription>
-                Bond sales and liquidity fees increase Treasury values, which back outstanding PTL tokens with intrinsic value.
+                In our OHM fork, bond sales and liquidity fees increase Treasury values, which back outstanding PTL tokens with intrinsic value.
               </StyledCardDescription>
             </CardContent>
             {/* <CardActions>
@@ -101,22 +124,6 @@ const Start: React.FC = () => {
                   variant="secondary"
                   to="/dashboard"
                 />
-              </Box>
-            </CardActions> */}
-          </Card>
-          <Card>
-            <Spacer size="md" />
-            <CardIcon>🏛️</CardIcon>
-            <CardContent>
-              <StyledCardName>Protocol Owned Liquidity</StyledCardName>
-              <Spacer size="sm" />
-              <StyledCardDescription>
-                No more predatory farmers. Lock-in liquidity also help regulate SPA supply.
-              </StyledCardDescription>
-            </CardContent>
-            {/* <CardActions>
-              <Box row justifyContent="center">
-                <Button text="Start farming" variant="secondary" to="/farm" />
               </Box>
             </CardActions> */}
           </Card>
@@ -137,6 +144,70 @@ const Start: React.FC = () => {
             </CardActions> */}
           </Card>
         </StartSplit>
+        <Spacer size="md" />
+        <Spacer size="md" />
+        <Spacer size="md" />
+        <StyledSectionH3>Our Tomb.finance Fork: <span style={{color:"#DE961A"}}>🧬 DNA</span></StyledSectionH3>
+        <StyledSectionH4>Note: This one will launch after Portal, since we are still working in the Oracla solution. Check our Discord for the latest updates!</StyledSectionH4>
+        <Spacer size="md" />
+        <StartSplit>
+          <Card>
+            <Spacer size="md" />
+            <CardIcon>₿</CardIcon>
+            <CardContent>
+              <StyledCardName>Algocoin pegged to BTC</StyledCardName>
+              <Spacer size="sm" />
+              <StyledCardDescription>
+                Enjoy high yields normally only found on high risk assets, but with exposure to BTC instead and minimal fees!
+              </StyledCardDescription>
+            </CardContent>
+            {/* <CardActions>
+              <Box row justifyContent="center">
+                <Button
+                  text="View treasury"
+                  variant="secondary"
+                  to="/dashboard"
+                />
+              </Box>
+            </CardActions> */}
+          </Card>
+          <Card>
+            <Spacer size="md" />
+            <CardIcon>🧰</CardIcon>
+            <CardContent>
+              <StyledCardName>Use Cases</StyledCardName>
+              <Spacer size="sm" />
+              <StyledCardDescription>
+                A coin with no uses has no value. That is why 🌀 $PTL and 🧬 $DNA will be a core part of all our ecosystem, including our upcoming game: EvoVerses.
+              </StyledCardDescription>
+            </CardContent>
+            {/* <CardActions>
+              <Box row justifyContent="center">
+                <Button text="Start farming" variant="secondary" to="/farm" />
+              </Box>
+            </CardActions> */}
+          </Card>
+          <Card>
+            <Spacer size="md" />
+            <CardIcon>📈</CardIcon>
+            <CardContent>
+              <StyledCardName>10,000:1 Ratio</StyledCardName>
+              <Spacer size="sm" />
+              <StyledCardDescription>
+              Because of BTCs high per coin price,<br/>🧬 $DNA is pegged to $WBTC at a 10,000:1 ratio
+              </StyledCardDescription>
+            </CardContent>
+            {/* <CardActions>
+              <Box row justifyContent="center">
+                <Button text="Go vote" variant="secondary" to="/governance" />
+              </Box>
+            </CardActions> */}
+          </Card>
+        </StartSplit>
+        <Spacer size="md" />
+        <Spacer size="md" />
+        <Spacer size="md" />
+        <StyledSectionH3>And much more to come!</StyledSectionH3>
         <Spacer size="lg" />
         <Separator />
         <Spacer size="lg" />
@@ -144,10 +215,6 @@ const Start: React.FC = () => {
     </StartPage>
   );
 };
-
-const StyledSecondaryButton = styled.button`
-background-color: red;
-`;
 
 const StyledHero = styled.div`
   align-items: center;
@@ -181,10 +248,41 @@ const StyledSectionDescription = styled.h3`
 `;
 
 const StyledSectionTitle = styled.div`
-  color: ${(props) => props.theme.colors.primary.main};
+  color: ${(props) => props.theme.textColor};
   font-size: 36px;
   font-weight: 700;
   margin: 0;
+  padding: 0;
+  text-align: center;
+`;
+
+const StyledSectionH2 = styled.div`
+  color: ${(props) => props.theme.colors.primary.main};
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+`;
+
+const StyledSectionH3 = styled.div`
+  color: ${(props) => props.theme.textColor};
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+`;
+
+const StyledSectionH4 = styled.div`
+  color: ${(props) => props.theme.colors.grey[400]};
+  font-size: 16px;
+  max-width: 500px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 500;
   padding: 0;
   text-align: center;
 `;
