@@ -1,3 +1,6 @@
+body {
+    overflow-x: hidden;
+}
 button[color="hsl(272deg 100% 100% / 100%)"] {
     background:#959595!important;
 }
@@ -12,4 +15,15 @@ button[color="hsl(272deg 95% 42% / 100%)"] {
 
 button[color="hsl(272deg 95% 42% / 100%)"] > a > span {
     color: white!important;
+}
+
+div.react-player {
+    width: 100%!important;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.react-player > video {
+    border-radius: 28px;
 }

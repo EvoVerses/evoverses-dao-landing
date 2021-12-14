@@ -18,9 +18,10 @@ import StartPageHeader from "components/StartPageHeader";
 import StartSplit from "components/StartSplit";
 import ReactTooltip from "react-tooltip";
 import ReactGA from "react-ga4";
+import ReactPlayer from "react-player/lazy";
 import "./style.css";
 
-const ASTRONAUTS = ["🕛", "🏛️", "⏳", "🌀", "👾", "🧬"];
+const ASTRONAUTS = ["🕛", "🏛️", "⏳", "🌀", "🦄", "🧬"];
 
 const Start: React.FC = () => {
   const [astronaut, setAstronaut] = useState("🌀");
@@ -42,8 +43,8 @@ const Start: React.FC = () => {
       <StyledHero>
         <StartPageHeader
           icon={`${astronaut}`}
-          title="DeFi 2.0 tools to grow your crypto assets"
-          subtitle="EvoVerses DAO is the OlympusDAO + Tomb.finance fork on Harmony ONE. EvoVerses DAO has an objetive: build an entire DeFi ecosystem and we are starting by building a community owned protocol for decentralized reserve currency."
+          title="DeFi 2.0 + Crypto Game to grow your crypto assets"
+          subtitle="EvoVerses DAO is the OlympusDAO + Tomb.finance fork + Crypto Game on Harmony ONE. EvoVerses DAO has an objetive: build an entire DeFi ecosystem and we are starting by building a community owned protocol for decentralized reserve currency."
         />
         <Container size="lg">
           <Box row justifyContent="center">
@@ -83,11 +84,11 @@ const Start: React.FC = () => {
           EvoVerses DAO is owned and controlled by our community of 🌀 token holders.<br/> Yes, we are a DAO with community votes and <b>multisig wallet</b>, as every project should be!
         </StyledSectionDescription>
         <Spacer size="lg" />
-        <StyledSectionH2>Which DeFi services do we currently have?</StyledSectionH2>
+        <StyledSectionH2>Which DeFi and Game are we developing?</StyledSectionH2>
         <Spacer size="md" />
         <Spacer size="md" />
         <Spacer size="md" />
-        <StyledSectionH3>Our OHM Fork: <span style={{color:"#DE961A"}}>🌀 Portal</span></StyledSectionH3>
+        <StyledSectionH3>1. Our OHM Fork: <span style={{color:"#DE961A"}}>🌀 Portal</span></StyledSectionH3>
         <StyledSectionH4>A real DAO, with community governance and multisig wallet</StyledSectionH4>
         <Spacer size="md" />
         <StartSplit>
@@ -147,7 +148,7 @@ const Start: React.FC = () => {
         <Spacer size="md" />
         <Spacer size="md" />
         <Spacer size="md" />
-        <StyledSectionH3>Our Tomb.finance Fork: <span style={{color:"#DE961A"}}>🧬 DNA</span></StyledSectionH3>
+        <StyledSectionH3>2. Our Tomb.finance Fork: <span style={{color:"#DE961A"}}>🧬 DNA</span></StyledSectionH3>
         <StyledSectionH4>Note: This one will launch after Portal, since we are still working in the Oracla solution. Check our Discord for the latest updates!</StyledSectionH4>
         <Spacer size="md" />
         <StartSplit>
@@ -207,7 +208,38 @@ const Start: React.FC = () => {
         <Spacer size="md" />
         <Spacer size="md" />
         <Spacer size="md" />
+        <StyledSectionH3>3. Our Play-to-Earn Pokemon-like Game: <span style={{color:"#DE961A"}}>🦄 EvoVerses</span></StyledSectionH3>
+        <StyledSectionH4>Note: This one will launch after Portal and DNA. Check our Discord for the latest updates!</StyledSectionH4>
+        <Spacer size="md" />
+        <ReactPlayer className='react-player' url="video/video.mp4" height='auto' controls={false} muted={true} loop={true} playing={true} />
+        <StyledSectionCaption>A little sneak peak of what is coming to EvoVerses, if you want more... you know, come to Discord 😏</StyledSectionCaption>
+        <Spacer size="md" />
+        <Spacer size="md" />
+        <Spacer size="md" />
         <StyledSectionH3>And much more to come!</StyledSectionH3>
+        <StyledSectionCaption>And the best part? Every service is connected to each other, building a huge and profitable ecosystem!</StyledSectionCaption>
+        <Spacer size="md" />
+        <StyledSectionH4CTA>Are you ready?</StyledSectionH4CTA>
+        <div style={{
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'center',
+          alignItems: 'center',
+          marginTop: 20
+        }}>
+        <Button
+              text="🦄 Start Now!"
+              href="https://discord.gg/jEg5phcWmw"
+              variant="secondary"
+              onClick={()=>{
+                ReactGA.event({
+                  category: "conversion",
+                  action: "open_discord",
+                  label: "bottom_cta"
+                });
+              }}
+            />
+        </div>
         <Spacer size="lg" />
         <Separator />
         <Spacer size="lg" />
@@ -277,6 +309,33 @@ const StyledSectionH3 = styled.div`
 const StyledSectionH4 = styled.div`
   color: ${(props) => props.theme.colors.grey[400]};
   font-size: 16px;
+  max-width: 500px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 500;
+  padding: 0;
+  text-align: center;
+`;
+
+const StyledSectionH4CTA = styled.div`
+  color: ${(props) => props.theme.textColor};
+  font-size: 24px;
+  max-width: 600px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 500;
+  padding: 0;
+  text-align: center;
+`;
+
+const StyledSectionCaption = styled.div`
+  color: ${(props) => props.theme.colors.grey[400]};
+  font-size: 14px;
+  font-style: italic;
   max-width: 500px;
   margin-top: 10px;
   margin-bottom: 10px;
