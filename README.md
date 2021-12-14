@@ -1,15 +1,12 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and it is a fork of the Spartacus landing page.
 
-## EvoDAO Landing Page
+## Evoverses DAO Landing Page
+To get this working on local, just clone this repository and run:
+### `npm i`
 
-Fork from yam finance.
-
-## Available Scripts
-
-In the project directory, you can run:
-
+Once it is installed, you can run the following scripts:
 ### `yarn start`
 
 Runs the app in the development mode.\
@@ -22,6 +19,8 @@ You will also see any lint errors in the console.
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+Note: There are no tests in the project right now, since it is just a landing page.
 
 ### `yarn build`
 
