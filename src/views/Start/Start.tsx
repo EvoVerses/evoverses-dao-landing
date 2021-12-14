@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState, useRef } from "react";
 
 import {
   Box,
@@ -16,11 +16,14 @@ import styled from "styled-components";
 import StartPage from "components/StartPage";
 import StartPageHeader from "components/StartPageHeader";
 import StartSplit from "components/StartSplit";
+import ReactTooltip from "react-tooltip";
+import "./style.css";
 
-const ASTRONAUTS = ["🕛", "🏛️", "⏳", "🔱 Ω", "Λ"];
+const ASTRONAUTS = ["🕛", "🏛️", "⏳", "🌀", "👾"];
 
 const Start: React.FC = () => {
-  const [astronaut, setAstronaut] = useState("Λ");
+  const [astronaut, setAstronaut] = useState("🌀");
+  const btnAppToolTipPRef = useRef() as React.MutableRefObject<HTMLInputElement>;
 
   const updateAstronaut = useCallback(() => {
     const newAstro = ASTRONAUTS[Math.floor(Math.random() * ASTRONAUTS.length)];
@@ -34,19 +37,23 @@ const Start: React.FC = () => {
 
   return (
     <StartPage>
+      <ReactTooltip />
       <StyledHero>
         <StartPageHeader
           icon={`${astronaut}`}
           title="DeFi 2.0 tools to grow your crypto assets"
-          subtitle="Spartacus is the Olympus fork on Fantom. Spartacus is missioned to build a community owned protocol for decentralized reserve currency."
+          subtitle="Evoverses DAO is the Olympus fork on Harmony ONE. Evoverses DAO has an objetive: build an entire DeFi ecosystem and we are starting by building a community owned protocol for decentralized reserve currency."
         />
         <Container size="lg">
           <Box row justifyContent="center">
-            <Button text="Open App" href="https://app.spartacus.finance" />
+            <Button text="Open App" onClick={()=> {
+              ReactTooltip.show(btnAppToolTipPRef.current);
+            }} />
+            <p ref={btnAppToolTipPRef} data-effect="float" data-offset="{'left':60, 'bottom':20}" data-place="bottom" data-tip='We are working on it, check our Discord for news!'></p>
             <Spacer />
             <Button
-              text="Join Λ Discord"
-              href="https://discord.gg/WHVARU4KzV"
+              text="Join 🌀 Discord"
+              href="https://discord.gg/jEg5phcWmw"
               variant="secondary"
             />
           </Box>
@@ -60,7 +67,7 @@ const Start: React.FC = () => {
         <Spacer size="lg" />
         <StyledSectionTitle>Fair finance for everyone.</StyledSectionTitle>
         <StyledSectionDescription>
-          Spartacus is owned and controlled by our community of Λ token holders.
+          Evoverses DAO is owned and controlled by our community of 🌀 token holders.
         </StyledSectionDescription>
         <Spacer size="lg" />
         <StartSplit>
@@ -71,7 +78,7 @@ const Start: React.FC = () => {
               <StyledCardName>Growing Treasury</StyledCardName>
               <Spacer size="sm" />
               <StyledCardDescription>
-                Bond sales and liquidity fees increase Treasury values, which back outstanding SPA tokens with intrinsic value.
+                Bond sales and liquidity fees increase Treasury values, which back outstanding PTL tokens with intrinsic value.
               </StyledCardDescription>
             </CardContent>
             {/* <CardActions>
@@ -107,7 +114,7 @@ const Start: React.FC = () => {
               <StyledCardName>Decentralized Governance</StyledCardName>
               <Spacer size="sm" />
               <StyledCardDescription>
-                Λ holders decide Spartacus's future via on-chain voting.
+              🌀 holders decide Evoverses DAO's future via on-chain voting.
               </StyledCardDescription>
             </CardContent>
             {/* <CardActions>
@@ -124,6 +131,10 @@ const Start: React.FC = () => {
     </StartPage>
   );
 };
+
+const StyledSecondaryButton = styled.button`
+background-color: red;
+`;
 
 const StyledHero = styled.div`
   align-items: center;

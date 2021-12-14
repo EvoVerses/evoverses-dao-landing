@@ -7,19 +7,19 @@
   },
   {
     "name": "GitHub",
-    "url": "https://github.com/spartacus-finance",
+    "url": "https://github.com/EvoVerses/",
     "router": false,
     "homeDisplay": true
   },
   {
     "name": "Twitter",
-    "url": "https://twitter.com/Spartacus_Fi",
+    "url": "https://twitter.com/EvoVerses",
     "router": false,
     "homeDisplay": true
   },
   {
     "name": "Discord",
-    "url": "https://discord.gg/spartacus",
+    "url": "https://discord.gg/jEg5phcWmw",
     "router": false,
     "homeDisplay": true
   },
@@ -36,14 +36,8 @@
     "homeDisplay": false
   },
   {
-    "name": "Forum",
-    "url": "https://",
-    "router": false,
-    "homeDisplay": false
-  },
-  {
     "name": "FAQ",
-    "url": "https://docs.spartacus.finance/",
+    "url": "https://docs.evoverses.com/",
     "router": false,
     "homeDisplay": false
   }

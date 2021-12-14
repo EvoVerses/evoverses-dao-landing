@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useEffect, useMemo } from "react";
 import { Web3Provider } from "@ethersproject/providers";
 import { Web3ReactProvider } from "@web3-react/core";
 
@@ -44,14 +44,29 @@ function App() {
 // themeProvider
 
 const Providers: React.FC = ({ children }) => {
-  const [darkModeSetting] = useLocalStorage("darkMode", false);
+  const [darkModeSetting, setDarkModeSetting] = useLocalStorage("darkMode", true);
   const { dark: darkTheme, light: lightTheme } = useMemo(() => {
     return createTheme({
-      baseColor: { h: 240, s: 100, l: 41 },
-      baseColorDark: { h: 229, s: 89, l: 50 },
+      baseColor: { h: 272, s: 95, l: 42 },
+      baseColorDark: {h: 272, s: 95, l: 42 },
       borderRadius: 28,
     });
+  }, [darkModeSetting]);
+
+  useEffect(() => {
+    // Add listener to update styles
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => setDarkModeSetting(e.matches ? true : false));
+
+    // Setup dark/light mode for the first time
+    setDarkModeSetting(window.matchMedia('(prefers-color-scheme: dark)').matches ? true : false);
+
+    // Remove listener
+    return () => {
+      window.matchMedia('(prefers-color-scheme: dark)').removeEventListener('change', () => {
+      });
+    }
   }, []);
+
   return (
     <ThemeProvider
       darkModeEnabled={darkModeSetting}

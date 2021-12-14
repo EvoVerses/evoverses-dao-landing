@@ -1,0 +1,7 @@
+button[color="hsl(272deg 95% 42% / 100%)"] {
+    background: #DE961A!important;
+}
+
+button[color="hsl(272deg 95% 42% / 100%)"] > a > span {
+    color: white!important;
+}

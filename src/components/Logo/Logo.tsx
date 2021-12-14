@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 const Logo: React.FC = () => {
   return (
     <StyledLogo to="/">
-      <StyledEmoji>Λ</StyledEmoji>
-      <StyledText>Spartacus Finance</StyledText>
+      <StyledEmoji>🌀</StyledEmoji>
+      <StyledText>EvoVerses DAO</StyledText>
     </StyledLogo>
   );
 };
