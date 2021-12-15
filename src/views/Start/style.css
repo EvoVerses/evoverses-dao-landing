@@ -19,7 +19,8 @@ button[color="hsl(272deg 95% 42% / 100%)"] > a > span {
 
 div.react-player {
     width: 100%!important;
-    height: auto;
+    max-width: 640px!important;
+    height: 360px!important;
     margin-left: auto;
     margin-right: auto;
 }

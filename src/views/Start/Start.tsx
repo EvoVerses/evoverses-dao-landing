@@ -211,7 +211,7 @@ const Start: React.FC = () => {
         <StyledSectionH3>3. Our Play-to-Earn Pokemon-like Game: <span style={{color:"#DE961A"}}>🦄 EvoVerses</span></StyledSectionH3>
         <StyledSectionH4>Note: This one will launch after Portal and DNA. Check our Discord for the latest updates!</StyledSectionH4>
         <Spacer size="md" />
-        <ReactPlayer className='react-player' url="video/video.mp4" height='auto' controls={false} muted={true} loop={true} playing={true} />
+        <ReactPlayer className='react-player' url="https://www.youtube.com/watch?v=tw7QJRhkwRs" height='auto' controls={false} muted={true} loop={true} playing={true} />
         <StyledSectionCaption>A little sneak peak of what is coming to EvoVerses, if you want more... you know, come to Discord 😏</StyledSectionCaption>
         <Spacer size="md" />
         <Spacer size="md" />
