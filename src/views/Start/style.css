@@ -25,6 +25,6 @@ div.react-player {
     margin-right: auto;
 }
 
-div.react-player > video {
+div.react-player > div > iframe {
     border-radius: 28px;
 }
