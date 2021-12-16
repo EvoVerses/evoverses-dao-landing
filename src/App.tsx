@@ -16,6 +16,7 @@ import Dashboard from "views/Dashboard";
 import Govern from "views/Govern";
 import Swap from "views/Swap";
 import TopBar from "components/TopBar";
+import Snowfall from 'react-snowfall';
 
 function App() {
   function getLibrary(provider: any): Web3Provider {
@@ -28,6 +29,8 @@ function App() {
     <HashRouter>
       <Providers>
         <Web3ReactProvider getLibrary={getLibrary}>
+          
+          <Snowfall />
           <TopBar />
           <Switch>
             <Route exact path="/">
