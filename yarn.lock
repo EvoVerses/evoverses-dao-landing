@@ -10079,6 +10079,7 @@ __metadata:
     react-player: ^2.9.0
     react-router-dom: ^5.2.0
     react-scripts: 4.0.3
+    react-snowfall: ^1.1.1
     react-tooltip: ^4.2.21
     request: ^2.88.2
     semantic-ui-css: ^2.4.1
@@ -17568,7 +17569,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-fast-compare@npm:^3.0.1":
+"react-fast-compare@npm:^3.0.1, react-fast-compare@npm:^3.2.0":
   version: 3.2.0
   resolution: "react-fast-compare@npm:3.2.0"
   checksum: 8ef272c825ae329f61633ce4ce7f15aa5b84e5214d88bc0823880236e03e985a13195befa2c7a4eda7db3b017dc7985729152d88445823f652403cf36c2b86aa
@@ -17774,6 +17775,18 @@ __metadata:
   bin:
     react-scripts: ./bin/react-scripts.js
   checksum: a05a46ce3145b42ac8b57633d3b90b6689c24697c1449bccf219349996d718a3cd0796e4910f4ab6abb5b024982cafd62345e88c8e7b42a45efca3bef1a0eb87
+  languageName: node
+  linkType: hard
+
+"react-snowfall@npm:^1.1.1":
+  version: 1.1.1
+  resolution: "react-snowfall@npm:1.1.1"
+  dependencies:
+    react-fast-compare: ^3.2.0
+  peerDependencies:
+    react: ^16.8 || 17.x
+    react-dom: ^16.8 || 17.x
+  checksum: 8867f9acb5418a068d626c250d8afea01e849dad275f07deef818a36dfcdfe70787855c39281895b70cce2331a4ffb40fc7d8de7222f7af0f5591d5cd1f5a935
   languageName: node
   linkType: hard
 
