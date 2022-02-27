@@ -1,12 +1,15 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and it is a fork of the Spartacus landing page.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Evoverses DAO Landing Page
+
 To get this working on local, just clone this repository and run:
+
 ### `npm i`
 
 Once it is installed, you can run the following scripts:
+
 ### `yarn start`
 
 Runs the app in the development mode.\
