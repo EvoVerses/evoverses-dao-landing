@@ -21,7 +21,7 @@ import ReactGA from "react-ga4";
 import ReactPlayer from "react-player/lazy";
 import "./style.css";
 
-const ASTRONAUTS = ["🕛", "🏛️", "⏳", "🌀", "🦄", "🧬"];
+const ASTRONAUTS = ["🏛️", "👾", "🌀", "🦄", "🧬"];
 
 const Start: React.FC = () => {
   const [astronaut, setAstronaut] = useState("🌀");
@@ -43,8 +43,8 @@ const Start: React.FC = () => {
       <StyledHero>
         <StartPageHeader
           icon={`${astronaut}`}
-          title="DeFi 2.0 + Crypto Game to grow your crypto assets"
-          subtitle="EvoVerses DAO is the OlympusDAO + Tomb.finance fork + Crypto Game on Harmony ONE. EvoVerses DAO has an objetive: build an entire DeFi ecosystem and we are starting by building a community owned protocol for decentralized reserve currency."
+          title="DeFi + Crypto Game to grow your crypto assets"
+          subtitle="EvoVerses is a crosschain DeFi game. We will be available at the beginning in several chains, like Polygon and Harmony ONE. EvoVerses DAO has an objetive: build an entire DeFi ecosystem and we are starting by building a Pokemon-like DEX game. Sounds good? Join us now!"
         />
         <Container size="lg">
           <Box row justifyContent="center">
@@ -88,18 +88,18 @@ const Start: React.FC = () => {
         <Spacer size="md" />
         <Spacer size="md" />
         <Spacer size="md" />
-        <StyledSectionH3>1. Our OHM Fork: <span style={{color:"#DE961A"}}>🌀 Portal</span></StyledSectionH3>
-        <StyledSectionH4>A real DAO, with community governance and multisig wallet</StyledSectionH4>
+        <StyledSectionH3>1. Our Decentralized Game-Exchange: <span style={{color:"#DE961A"}}>🌀 EvoDEX</span></StyledSectionH3>
+        <StyledSectionH4>A Pokemon-like game, but with its own Exchange, with community governance and multisig wallet</StyledSectionH4>
         <Spacer size="md" />
         <StartSplit>
           <Card>
             <Spacer size="md" />
             <CardIcon>🏛️</CardIcon>
             <CardContent>
-              <StyledCardName>Protocol Owned Liquidity</StyledCardName>
+              <StyledCardName>Secure</StyledCardName>
               <Spacer size="sm" />
               <StyledCardDescription>
-                No more predatory farmers. Lock-in liquidity also help regulate PTL supply.
+                Forked from UniSwap code, audited by the most popular companies
               </StyledCardDescription>
             </CardContent>
             {/* <CardActions>
@@ -112,10 +112,10 @@ const Start: React.FC = () => {
             <Spacer size="md" />
             <CardIcon>💸</CardIcon>
             <CardContent>
-              <StyledCardName>Growing Treasury</StyledCardName>
+              <StyledCardName>Fun and Original</StyledCardName>
               <Spacer size="sm" />
               <StyledCardDescription>
-                In our OHM fork, bond sales and liquidity fees increase Treasury values, which back outstanding PTL tokens with intrinsic value.
+                A real game but with a complete DeFi integration, your in-game assets now are useful in your real life!
               </StyledCardDescription>
             </CardContent>
             {/* <CardActions>
@@ -135,7 +135,7 @@ const Start: React.FC = () => {
               <StyledCardName>Decentralized Governance</StyledCardName>
               <Spacer size="sm" />
               <StyledCardDescription>
-              🌀 holders decide Evoverses DAO's future via on-chain voting.
+              🌀 holders decide EvoVerses DAO's future via on-chain voting.
               </StyledCardDescription>
             </CardContent>
             {/* <CardActions>
@@ -148,68 +148,8 @@ const Start: React.FC = () => {
         <Spacer size="md" />
         <Spacer size="md" />
         <Spacer size="md" />
-        <StyledSectionH3>2. Our Tomb.finance Fork: <span style={{color:"#DE961A"}}>🧬 DNA</span></StyledSectionH3>
-        <StyledSectionH4>Note: This one will launch after Portal, since we are still working in the Oracla solution. Check our Discord for the latest updates!</StyledSectionH4>
-        <Spacer size="md" />
-        <StartSplit>
-          <Card>
-            <Spacer size="md" />
-            <CardIcon>₿</CardIcon>
-            <CardContent>
-              <StyledCardName>Algocoin pegged to BTC</StyledCardName>
-              <Spacer size="sm" />
-              <StyledCardDescription>
-                Enjoy high yields normally only found on high risk assets, but with exposure to BTC instead and minimal fees!
-              </StyledCardDescription>
-            </CardContent>
-            {/* <CardActions>
-              <Box row justifyContent="center">
-                <Button
-                  text="View treasury"
-                  variant="secondary"
-                  to="/dashboard"
-                />
-              </Box>
-            </CardActions> */}
-          </Card>
-          <Card>
-            <Spacer size="md" />
-            <CardIcon>🧰</CardIcon>
-            <CardContent>
-              <StyledCardName>Use Cases</StyledCardName>
-              <Spacer size="sm" />
-              <StyledCardDescription>
-                A coin with no uses has no value. That is why 🌀 $PTL and 🧬 $DNA will be a core part of all our ecosystem, including our upcoming game: EvoVerses.
-              </StyledCardDescription>
-            </CardContent>
-            {/* <CardActions>
-              <Box row justifyContent="center">
-                <Button text="Start farming" variant="secondary" to="/farm" />
-              </Box>
-            </CardActions> */}
-          </Card>
-          <Card>
-            <Spacer size="md" />
-            <CardIcon>📈</CardIcon>
-            <CardContent>
-              <StyledCardName>10,000:1 Ratio</StyledCardName>
-              <Spacer size="sm" />
-              <StyledCardDescription>
-              Because of BTCs high per coin price,<br/>🧬 $DNA is pegged to $WBTC at a 10,000:1 ratio
-              </StyledCardDescription>
-            </CardContent>
-            {/* <CardActions>
-              <Box row justifyContent="center">
-                <Button text="Go vote" variant="secondary" to="/governance" />
-              </Box>
-            </CardActions> */}
-          </Card>
-        </StartSplit>
-        <Spacer size="md" />
-        <Spacer size="md" />
-        <Spacer size="md" />
-        <StyledSectionH3>3. Our Play-to-Earn Pokemon-like Game: <span style={{color:"#DE961A"}}>🦄 EvoVerses</span></StyledSectionH3>
-        <StyledSectionH4>Note: This one will launch after Portal and DNA. Check our Discord for the latest updates!</StyledSectionH4>
+        <StyledSectionH3>2. Our Play-to-Earn Pokemon-like Game: <span style={{color:"#DE961A"}}>🦄 EvoVerses</span></StyledSectionH3>
+        <StyledSectionH4>Note: This one will launch after the EvoDEX. Check our Discord for the latest updates!</StyledSectionH4>
         <Spacer size="md" />
         <ReactPlayer className='react-player' url="https://www.youtube.com/watch?v=tw7QJRhkwRs" height='auto' controls={false} muted={true} loop={true} playing={true} />
         <StyledSectionCaption>A little sneak peak of what is coming to EvoVerses, if you want more... you know, come to Discord 😏</StyledSectionCaption>
