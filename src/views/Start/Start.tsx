@@ -56,16 +56,16 @@ const Start: React.FC = () => {
               });
               ReactTooltip.show(btnAppToolTipPRef.current);
             }} />
-            <p ref={btnAppToolTipPRef} data-effect="float" data-offset="{'left':60, 'bottom':20}" data-place="bottom" data-tip='We are working on it, check our Discord for news!'></p>
+            <p ref={btnAppToolTipPRef} data-effect="float" data-offset="{'left':60, 'bottom':20}" data-place="bottom" data-tip='We are working on it, check our Telegram Channel for news!'></p>
             <Spacer />
             <Button
-              text="Join 🌀 Discord"
-              href="https://discord.gg/jEg5phcWmw"
+              text="Join 🌀 Telegram Channel"
+              href="https://t.me/evoversesOfficial"
               variant="secondary"
               onClick={()=>{
                 ReactGA.event({
                   category: "conversion",
-                  action: "open_discord",
+                  action: "open_telegram",
                   label: "hero"
                 });
               }}
@@ -149,10 +149,10 @@ const Start: React.FC = () => {
         <Spacer size="md" />
         <Spacer size="md" />
         <StyledSectionH3>2. Our Play-to-Earn Pokemon-like Game: <span style={{color:"#DE961A"}}>🦄 EvoVerses</span></StyledSectionH3>
-        <StyledSectionH4>Note: This one will launch after the EvoDEX. Check our Discord for the latest updates!</StyledSectionH4>
+        <StyledSectionH4>Note: This one will launch after the EvoDEX. Check our Telegram Channel for the latest updates!</StyledSectionH4>
         <Spacer size="md" />
         <ReactPlayer className='react-player' url="https://www.youtube.com/watch?v=tw7QJRhkwRs" height='auto' controls={false} muted={true} loop={true} playing={true} />
-        <StyledSectionCaption>A little sneak peak of what is coming to EvoVerses, if you want more... you know, come to Discord 😏</StyledSectionCaption>
+        <StyledSectionCaption>A little sneak peak of what is coming to EvoVerses, if you want more... you know, come to pur Telegram Channel 😏</StyledSectionCaption>
         <Spacer size="md" />
         <Spacer size="md" />
         <Spacer size="md" />
@@ -169,12 +169,12 @@ const Start: React.FC = () => {
         }}>
         <Button
               text="🦄 Start Now!"
-              href="https://discord.gg/jEg5phcWmw"
+              href="https://t.me/evoversesOfficial"
               variant="secondary"
               onClick={()=>{
                 ReactGA.event({
                   category: "conversion",
-                  action: "open_discord",
+                  action: "open_telegram",
                   label: "bottom_cta"
                 });
               }}
